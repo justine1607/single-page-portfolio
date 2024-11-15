@@ -1,0 +1,35 @@
+.theme-mobile-headline{
+  color: var(--white-100);
+  font-size: var(--heading-l);
+  line-height: var(--headingmobile-line);
+  letter-spacing: var(--mobile-space);
+}
+.theme-underline{
+  border: none;
+  font-size: var(--mobile-font);
+  color: var(--white-100);
+  text-transform: uppercase;
+  letter-spacing: var(--headingmobile-space);
+  padding: 1rem 0;
+  border-bottom: 2px solid var(--green-color);
+  font-weight: var(--headingxl);
+}
+.theme-medium-text{
+  padding-top: 2rem;
+  font-size: var(--heading-m);
+  line-height: var(--headingM-line);
+  text-transform: uppercase;
+}
+.theme-icons{
+  p{
+    font-size: var(--mobileheading-m-font);
+  }
+}
+@media screen and (min-width: 768px){
+  .theme-mobile-headline {
+    font-size: var(--tabletheading-xl);
+    line-height: var(--tabletheading-xl);
+    letter-spacing: var(--tabletheadingXl-space);
+
+  }
+}

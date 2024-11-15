@@ -1,0 +1,694 @@
+:root {
+  --black-8: #151515;
+  --green-color:#4EE1A0;
+  --darkgrey:#242424;
+  --grey:#d9d9d9;
+  --white-100:#ffff;
+  --heading-xl:8.8rem;
+  --tabletheading-xl:7.2rem;
+  --tabletheading-l:4.8rem;
+  --heading-l:4rem;
+  --heading-m:2.4rem;
+  --mobileheading-m-font:3.2rem;
+  --mobile-font:1.6rem;
+  --typography:"Space Grotesk";
+  --headingxl:700;
+  --heading-medium:500;
+  --headingXl-line:8.8rem;
+  --tabletheadingXl-line:7.2rem;
+  --tabletheadingl-line:5.6rem;
+  --headingl-line:5.6rem;
+  --headingM-line:3.2rem;
+  --text-line:2.8rem;
+  --headingmobile-line:4rem;
+  --textmobile-line:2.6rem;
+  --headingXl-space: -0.25rem;
+  --tabletheadingXl-space: -0.205rem;
+  --tabletheadingl-space: -0.15rem;
+  --headingl-space: -0.15rem;
+  --headingmobile-space:0.229rem;
+  --heading-m-mobile-space:-0.1rem;
+  --mobile-space:-0.114rem;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: var(--typography);
+  font-weight: var(--heading-medium);
+  line-height: var(--headingM-line);
+  min-height: 100vh;
+  color: var(--grey);
+  background-color: var(--black-8);
+  text-rendering: optimizeSpeed;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Modern CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px; /* Set base font-size (16px for most browsers) */
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling on mobile */
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%; /* Responsive media */
+}
+
+button, input, select, textarea {
+  font: inherit; /* Inherit font settings */
+}
+
+a {
+  color: inherit; /* Use the current color */
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none; /* Remove list styles */
+}
+
+table {
+  border-collapse: collapse; /* Consistent table borders */
+  width: 100%;
+}
+
+q, blockquote {
+  quotes: none; /* Remove quote styling */
+}
+
+blockquote::before, blockquote::after,
+q::before, q::after {
+  content: ""; /* Prevent default quotes */
+}
+
+hr {
+  border: none; /* Remove default HR styling */
+}
+
+:focus {
+  outline: 2px dashed #000; /* Visible focus outline */
+  outline-offset: 4px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none; /* Remove outline for non-keyboard focus */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.theme-mobile-headline {
+  color: var(--white-100);
+  font-size: var(--heading-l);
+  line-height: var(--headingmobile-line);
+  letter-spacing: var(--mobile-space);
+}
+
+.theme-underline {
+  border: none;
+  font-size: var(--mobile-font);
+  color: var(--white-100);
+  text-transform: uppercase;
+  letter-spacing: var(--headingmobile-space);
+  padding: 1rem 0;
+  border-bottom: 2px solid var(--green-color);
+  font-weight: var(--headingxl);
+}
+
+.theme-medium-text {
+  padding-top: 2rem;
+  font-size: var(--heading-m);
+  line-height: var(--headingM-line);
+  text-transform: uppercase;
+}
+
+.theme-icons p {
+  font-size: var(--mobileheading-m-font);
+}
+
+@media screen and (min-width: 768px) {
+  .theme-mobile-headline {
+    font-size: var(--tabletheading-xl);
+    line-height: var(--tabletheading-xl);
+    letter-spacing: var(--tabletheadingXl-space);
+  }
+}
+.theme-container {
+  padding-inline: 1.6rem;
+}
+
+h4 {
+  font-size: var(--mobile-font);
+  font-weight: var(--heading-medium);
+  line-height: var(--textmobile-line);
+}
+
+.icon-wrapper {
+  position: relative;
+  color: var(--white-100);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.icon-wrapper .icon-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.icon-wrapper .icon-container {
+  display: flex;
+  justify-content: center;
+  gap: 2.6rem;
+}
+.icon-wrapper .image-container {
+  position: relative;
+}
+.icon-wrapper .image-container .mobile {
+  position: absolute;
+}
+.icon-wrapper .image-container .rings-pattern {
+  top: 0;
+  position: absolute;
+  right: 50%;
+}
+.icon-wrapper .image-container .circle-pattern {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+}
+
+.profile-section {
+  padding-inline: 1.6rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.profile-section .text-section {
+  grid-column: 1/span 1;
+  max-width: unset;
+}
+.profile-section .image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.profile-section .tablet {
+  display: none;
+  z-index: -1;
+  top: 0;
+  right: 0;
+}
+.profile-section .desktop {
+  display: none;
+}
+.profile-section .circle-pattern {
+  position: absolute;
+  bottom: 0;
+  left: 90%;
+}
+.profile-section .profile-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.profile-section .mobile-profile {
+  display: block;
+  max-width: 17.4rem;
+  top: 0;
+}
+.profile-section .about-me {
+  padding: 4rem 0 8rem;
+}
+.profile-section .about-me .text-container {
+  text-align: center;
+  gap: 2.4rem;
+  display: flex;
+  flex-direction: column;
+}
+.profile-section .about-me .text-container .name-underline {
+  border-bottom: 4px solid var(--green-color);
+}
+.profile-section .about-me .text-container .text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: var(--textmobile-line);
+}
+.profile-section .about-me .text-container .contact-me {
+  padding-top: 2.4rem;
+}
+
+.experiences {
+  border-top: 1px solid var(--white-100);
+  border-bottom: 1px solid var(--white-100);
+  padding: 4rem 0;
+  margin-bottom: 8rem;
+  position: relative;
+  overflow: hidden;
+}
+.experiences .text-container {
+  gap: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.experiences .text-container h3 {
+  color: var(--white-100);
+  font-size: var(--mobileheading-m-font);
+  line-height: var(--headingmobile-line);
+  letter-spacing: var(--heading-m-mobile-space);
+}
+.experiences .experience-wrapper {
+  text-align: center;
+}
+.experiences .rings-pattern-right {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+.projects {
+  padding-bottom: 4rem;
+}
+.projects .project-text-wrapper {
+  padding-bottom: 4rem;
+  display: flex;
+  align-items: center;
+}
+.projects .project-pad {
+  padding-bottom: 4rem;
+}
+.projects h4 {
+  margin-left: auto;
+}
+.projects .course-wrapper {
+  padding-top: 0.7rem;
+  display: flex;
+  gap: 1.8rem;
+}
+.projects .course-wrapper p {
+  text-transform: uppercase;
+}
+.projects .a-wrapper {
+  padding-top: 2rem;
+  display: flex;
+  gap: 3rem;
+}
+
+.contact-container {
+  background: var(--darkgrey);
+}
+.contact-container .contact {
+  padding-top: 6rem;
+}
+.contact-container .contact .text-container {
+  position: relative;
+  padding-inline: 1.6rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.contact-container .contact .contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+.contact-container .contact .rings-pattern-3rd {
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+}
+.contact-container .contact form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+.contact-container .contact form input,
+.contact-container .contact form textarea {
+  color: var(--white-100);
+  font-size: var(--mobile-font);
+  letter-spacing: -0.022rem;
+  line-height: var(--textmobile-line);
+  padding: 1.6rem;
+  border: none;
+  background: none;
+  border-bottom: 1px solid var(--white-100);
+}
+.contact-container .contact form textarea {
+  padding-bottom: 4rem;
+}
+.contact-container .contact form img {
+  position: absolute;
+  right: 50%;
+  top: auto;
+  bottom: 0;
+}
+.contact-container .contact form button {
+  padding-top: 3.2rem;
+  background: none;
+  margin-left: auto;
+}
+.contact-container .contact .footer-icon-wrapper {
+  margin-top: 8.7rem;
+  margin-inline: 1.6rem;
+  border-top: 1px solid var(--white-100);
+  padding: 3.9rem 0 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.contact-container .contact .footer-icon-wrapper .icon-container {
+  display: flex;
+  gap: 2.6rem;
+}
+.contact-container .contact .footer-icon-wrapper .icon-container img {
+  max-width: 2.461rem;
+  max-height: 2.461rem;
+}
+
+@media screen and (min-width: 620px) {
+  .hero-theme-container {
+    position: relative;
+    overflow: hidden;
+  }
+  .icon-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 9rem;
+  }
+  .icon-wrapper {
+    padding-top: 2.9rem;
+    width: 100%;
+    position: unset;
+    display: unset;
+  }
+  .icon-wrapper .icon-text {
+    padding-inline: 3.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .icon-wrapper .icon-container .icon-img {
+    max-width: 2.4rem;
+    max-height: 2.4rem;
+  }
+  .icon-wrapper .image-container .rings-pattern {
+    position: absolute;
+    right: 70%;
+  }
+  .profile-section {
+    padding-left: 3.2rem;
+    overflow: unset;
+    padding-bottom: 4.7rem;
+    display: grid;
+    grid-template-columns: 2fr 3em 1fr;
+    align-items: center;
+  }
+  .profile-section .text-section {
+    grid-column: 1/span 2;
+    grid-row: 1;
+    max-width: unset;
+  }
+  .profile-section .about-me {
+    padding: 0;
+  }
+  .profile-section .about-me .text-container {
+    text-align: left;
+    gap: 4.3rem;
+  }
+  .profile-section .about-me .text-container .headline {
+    font-size: var(--tabletheading-xl);
+    line-height: var(--tabletheadingXl-line);
+    letter-spacing: var(--tabletheadingXl-space);
+  }
+  .profile-section .about-me .text-container .text-wrapper {
+    display: block;
+    max-width: 44.5rem;
+    gap: 6.6rem;
+  }
+  .profile-section .about-me .text-container .contact-me {
+    padding: 6.6rem 0 0;
+    display: inline-flex;
+  }
+  .profile-section .image-container .mobile {
+    display: none;
+  }
+  .profile-section .image-container .tablet {
+    position: absolute; /* This removes the image from the flow */
+    display: block;
+    z-index: -1;
+    top: -36rem;
+    /* bottom: 0; */
+    right: 0;
+    max-width: 32.2rem;
+  }
+  .profile-section .image-container .desktop {
+    display: none;
+    max-width: 44.5rem;
+    z-index: -1;
+  }
+  .profile-section .image-container .circle-pattern {
+    position: relative;
+    bottom: 0;
+    left: 10rem;
+    top: 10rem;
+  }
+  .experiences-theme-container {
+    position: relative;
+    overflow: hidden;
+  }
+  .experiences-theme-container .experiences {
+    position: unset;
+    margin-inline: 3.2rem;
+    border-bottom: none;
+  }
+  .experiences-theme-container .experiences .text-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 5.2rem;
+  }
+  .experiences-theme-container .experiences .rings-pattern-right {
+    bottom: 0;
+  }
+  .experiences-theme-container .experiences .experience-wrapper {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+  .experiences-theme-container .experiences .experience-wrapper h3 {
+    font-size: var(--tabletheading-l);
+    line-height: var(--tabletheadingl-line);
+    letter-spacing: var(--tabletheadingl-space);
+    font-weight: var(--headingxl);
+  }
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .projects .project-text-wrapper {
+    grid-column: 1/span 2;
+  }
+  .contact-container .contact .text-container {
+    padding-inline: 16.2rem;
+    gap: 2rem;
+    overflow: hidden;
+  }
+  .contact-container .contact .footer-icon-wrapper {
+    flex-direction: row;
+    margin-inline: 3.2rem;
+    padding: 3rem 0 4rem;
+    justify-content: space-between;
+  }
+  .contact-container .contact .footer-icon-wrapper .icon-container {
+    gap: 3.2rem;
+  }
+}
+@media screen and (min-width: 1092px) {
+  .hero-theme-container {
+    max-width: 110rem;
+    margin-inline: auto;
+  }
+  .icon-img-wrapper {
+    position: relative;
+    overflow: unset;
+  }
+  .icon-wrapper {
+    padding-top: 2.9rem;
+    width: 100%;
+    position: absolute;
+    padding-inline: 3rem;
+    display: unset;
+  }
+  .icon-wrapper .icon-container .icon-img {
+    max-width: 2.4rem;
+    max-height: 2.4rem;
+  }
+  .icon-wrapper .icon-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .icon-wrapper .image-container .rings-pattern {
+    position: absolute;
+    right: 70%;
+  }
+  .profile-section {
+    padding-bottom: 6.5rem;
+    display: grid;
+    grid-template-columns: 2fr 3em 1fr;
+    align-items: center;
+  }
+  .profile-section .text-section {
+    grid-column: 1/span 2;
+    grid-row: 1;
+    max-width: unset;
+  }
+  .profile-section .about-me {
+    padding: 0;
+  }
+  .profile-section .about-me .text-container {
+    text-align: left;
+    gap: 4.3rem;
+  }
+  .profile-section .about-me .text-container .headline {
+    font-size: 8.8rem;
+    line-height: var(--headingXl-line);
+    letter-spacing: var(--headingXl-space);
+  }
+  .profile-section .about-me .text-container .text-wrapper {
+    display: block;
+    max-width: 44.5rem;
+    gap: 6.6rem;
+  }
+  .profile-section .about-me .text-container .contact-me {
+    padding: 6.6rem 0 0;
+    display: inline-flex;
+  }
+  .profile-section .image-container {
+    grid-column: 3/span 2;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  .profile-section .image-container .mobile {
+    display: none;
+  }
+  .profile-section .image-container .tablet {
+    display: none;
+    z-index: -1;
+    top: 0;
+    /* bottom: 0; */
+    right: 0;
+  }
+  .profile-section .image-container .desktop {
+    max-width: 44.5rem;
+    display: block;
+    z-index: -1;
+  }
+  .profile-section .image-container .circle-pattern {
+    position: absolute;
+    bottom: 0;
+    left: unset;
+    right: 100%;
+    top: 70%;
+  }
+  .experiences-theme-container {
+    position: unset;
+  }
+  .experiences-theme-container .experiences {
+    border-bottom: none;
+    position: unset;
+  }
+  .experiences-theme-container .experiences .text-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 3rem;
+    row-gap: 5.8rem;
+  }
+  .experiences-theme-container .experiences .experience-wrapper {
+    text-align: left;
+  }
+  .experiences-theme-container .experiences .rings-pattern-right {
+    bottom: unset;
+    left: 70%;
+    max-width: 42rem;
+  }
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.4rem;
+  }
+  .projects .project-text-wrapper {
+    grid-column: 1/span 2;
+  }
+  .contact-container .contact .text-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 110rem;
+    margin-inline: auto;
+    padding-inline: 0;
+    padding-bottom: 9.2rem;
+    flex-direction: row;
+    text-align: left;
+    gap: 22.2rem;
+  }
+  .contact-container .contact .contact-wrapper {
+    flex: 1;
+  }
+  .contact-container .contact .rings-pattern-3rd {
+    position: absolute;
+    right: 70%;
+    top: 50%;
+  }
+  .contact-container .contact form {
+    flex: 1;
+  }
+  .contact-container .contact .footer-icon-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 110rem;
+    margin-inline: auto;
+    padding: 3.9rem 0 4rem;
+  }
+  .contact-container .contact .icon-container {
+    display: flex;
+    gap: 2.4rem;
+  }
+  .contact-container .contact .icon-container img {
+    max-width: 2.461rem;
+    max-height: 2.461rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

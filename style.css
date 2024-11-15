@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+:root {
+  --background: #000;
+  --hero-color:#FFFFFF;
+  --nickname-text: 2.4rem;
+  --heading-text: 4rem;
+  --paragraph-text: 1.6rem;
+  --subheading-tet:3.2rem;
+  --headings:Space Grotesk;
+  --heading:600 ;
+}
+
+body {
+  font-size: 1.6rem;
+  min-height: 100vh;
+  color: var(--hero-color);
+  background-color: var(--background);
+}
+
+.icon-wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.icon-wrapper p {
+  font-size: var(--nickname-text);
+}
+
+.rings-pattern {
+  max-width: 100%;
+  position: absolute;
+  right: 50%;
+  z-index: -1;
+}
+
+.hero-section .image-container {
+  position: relative;
+}
+.hero-section .image-container img, .hero-section .image-container .rings-pattern, .hero-section .image-container .circle-pattern {
+  max-width: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.projects img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=style.css.map */
